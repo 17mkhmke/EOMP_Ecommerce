@@ -43,37 +43,58 @@ integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipui
   <br><br><br><br>
   <fieldset>
     <legend><h2>Add Product</h2></legend>
-  
-<form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
-<div class="inputBox">
-  <input type="text" required="required" id="id">
-  <span>ID</span>
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+  Add Item
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Add Product</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+          <div class="inputBox">
+            <input type="text" required="required" id="id">
+            <span>ID</span>
+          </div>
+          <div class="inputBox">
+            <input type="text" required="required" id="productName">
+            <span>Product Name</span>
+          </div>
+          <div class="inputBox">
+            <input type="text" required="required" id="price">
+            <span>Price</span>
+          </div>
+          <div class="inputBox">
+            <input type="text" required="required" id="category">
+            <span>Category</span>
+          </div>
+          <div class="inputBox">
+            <input type="text" required="required" id="quantity">
+            <span>Quantity</span>
+          </div>
+          <div class="inputBox">
+            <input type="text" required="required" id="image">
+            <span>Image URL(PostImage)</span>
+          </div>
+          <div class="crudButtons">
+            <input type="button" value="Add Product" id="btn" onclick="submit(event)">
+            <input type="reset" value="Reset">
+          </div>
+          </form>          
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Add Product</button>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="inputBox">
-  <input type="text" required="required" id="productName">
-  <span>Product Name</span>
-</div>
-<div class="inputBox">
-  <input type="text" required="required" id="price">
-  <span>Price</span>
-</div>
-<div class="inputBox">
-  <input type="text" required="required" id="category">
-  <span>Category</span>
-</div>
-<div class="inputBox">
-  <input type="text" required="required" id="quantity">
-  <span>Quantity</span>
-</div>
-<div class="inputBox">
-  <input type="text" required="required" id="image">
-  <span>Image URL(PostImage)</span>
-</div>
-<div class="crudButtons">
-  <input type="button" value="Add Product" id="btn" onclick="submit(event)">
-  <input type="reset" value="Reset">
-</div>
-</form>
 
 </fieldset>
 <br>
@@ -99,6 +120,7 @@ integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipui
       </tr>
     </thead>
     <tbody id="product-list">
+      
 <!-- Body of table -->
     </tbody>
   </table>

@@ -105,37 +105,32 @@
            `
            <tr id="name">
            <th scope="row" id="name">${item.id}</th>
-           <td id="name2">${item.productName}</td>
-           <td id="name2">R${item.price}</td>
-           <td id="name4">${item.category}</td>
-           <td id="name4">${item.quantity}</td>
+           <td>${item.productName}</td>
+           <td>R${item.price}</td>
+           <td>${item.category}</td>
+           <td>${item.quantity}</td>
            <td> <img class="adminImage" src='${item.image}'> </td>
            
            <td> <a href="" class="btn btn-warning btn-sm delete">DELETE</td>
-           <td> <a href="" class="btn btn-success btn-sm Edit onclick">EDIT</td>
+           <td> <a href="" class="btn btn-success btn-sm edit onclick">EDIT</td>
            </tr>
            `
-       })
-    }
-    show()
-
-console.table(products.data);
-document.write
-let add = document.querySelector('#btn')
-add.addEventListener('click',(e)=>{
-    e.preventDefault();
-    alert("Item added to storage");
-});
+       });
+    };
+    show();
 
 //Delete DATA
 
-// console.log(id)
-        // document.querySelector('#tbody').innerHTML =``
-        document.querySelector('.delete')
-        let phones = JSON.parse(localStorage.getItem('fProducts'));
-        phones.splice(id, 1)
-        // console.log(phones)
-        localStorage.setItem('fProducts', JSON.stringify(fProducts))
-        // console.table(JSON.parse(localStorage.phones))
-        show();
-        // console.table(phones)
+    let deleteButtons = document.querySelectorAll('.delete');
+
+deleteButtons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    event.preventDefault();
+    let row = button.parentElement.parentElement;
+    let id = parseInt(row.querySelector('#name').textContent);
+    let newProducts = products.filter((item) => item.id !== id);
+    localStorage.setItem('products', JSON.stringify(newProducts));
+    row.remove();
+  });
+});
+

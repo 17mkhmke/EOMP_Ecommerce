@@ -38,7 +38,7 @@
 }
 
 .landing {
-    background: url(/eCommerceSpecial/assets/e-comBackground.jpg)no-repeat;
+    background: url(/assets/e-comBackground.jpg)no-repeat;
     background-size: cover;
     height: 100vh;
     background-position: 50% 50%;
@@ -252,7 +252,7 @@ h2{
   height: 5rem;
 }
 
-/* footer */
+/* ====================================================footer==================================================================== */
 footer{
   padding: 40px 0;
   font-weight: 200;
@@ -263,7 +263,7 @@ footer{
   width: 10rem;
 }
 
-/* =================================Responsiveness============================= */
+/* ===================================================Responsiveness========================================================= */
 /* For Desktop View */
 @media screen and (min-width: 1024px) {
     .gfg-div {
@@ -278,8 +278,6 @@ footer{
     .gfg-div {
       width: 400px;
       height: 400px;
-      background-color: orange;
-      color: black;
     }
   }
    
@@ -289,8 +287,6 @@ footer{
     .gfg-div {
       width: 200px;
       height: 200px;
-      background-color: red;
-      color: #fff;
     }
   }
    
@@ -300,8 +296,6 @@ footer{
     .gfg-div {
       width: 400px;
       height: 200px;
-      background-color: cyan;
-      color: black;
     }
   }
    
@@ -310,8 +304,6 @@ footer{
     .gfg-div {
       width: 400px;
       height: 200px;
-      background-color: chartreuse;
-      color: black;
     }
   }
    
@@ -321,8 +313,6 @@ footer{
     .gfg-div {
       width: 400px;
       height: 400px;
-      background-color: brown;
-      color: black;
     }
   }
    
@@ -332,8 +322,6 @@ footer{
     .gfg-div {
       width: 400px;
       height: 400px;
-      background-color: cornflowerblue;
-      color: black;
     }
   }
    
@@ -343,7 +331,5 @@ footer{
     .gfg-div {
       width: 400px;
       height: 400px;
-      background-color: darkgoldenrod;
-      color: black;
     }
   }

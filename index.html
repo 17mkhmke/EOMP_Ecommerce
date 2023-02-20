@@ -41,32 +41,6 @@ integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipui
 </header>
 <body>
  
-  <!-- <header>
-    <nav class="navbar navbar-expand-lg bg-danger w-100 top-0 position-fixed">
-        <div class="container">
-         <img src="https://i.postimg.cc/nVNkLGtQ/e-com-Logo.jpg"  class="logo"> 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto my-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="checkout.html"><i class="fa-solid fa-cart-plus"></i></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html" >Admin</a>
-              </li>
-             
-            </ul>
-            
-          </div>
-        </div>
-      </nav>
-    </header>
-     -->
      <br><br><br>
       <section class="landing">
         <br><br><br>
@@ -96,18 +70,20 @@ integrity="sha512-Woz+DqWYJ51bpVk5Fv0yES/edIMXjj3Ynda+KWTIkGoynAMHrqTcDUQltbipui
         <div class="wrapper">
           <div id="search-container">
             <div class="col-lg-5 m-auto text-center">
-            <input type="search" id="search-input" placeholder="search your poison here" onchange="search()">
+              <input type="text" id="search-input" placeholder="Search products">
+              <br>
+            <button id="all">All</button>
+<button id="beer">Beer</button>
+<button id="cider">Cider</button>
+<button id="vodka">Vodka</button>
+<button id="wine">Wine</button>
+<button id="champaign">Champaign</button>
+
+
             
           </div>
         </div>
-          <div class="buttons">
-            <button class="filterButtons" onclick="filter('all')">All</button>
-            <button class="filterButtons" onclick="filter('beer')">Beer</button>
-            <button class="filterButtons" onclick="filter('vodka')">Vodka</button>
-            <button class="filterButtons" onclick="filter('cider')">Ciders</button>
-            <button class="filterButtons" onclick="filter('champaign')">Shampompo</button>
-            <button class="filterButtons" onclick="filter('whisky')">Whisky</button>
-          </div>
+          
       </div>
         <!--Product Cards Section-->
         <!-- <main>
